@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'SivaLabs Tech Guides'
 theme = 'ananke'
 
+[params]
+    custom_css = ["molokai.css","custom.css"]
+
 [markup]
     [markup.asciidocExt]
         backend = 'html5'
@@ -17,6 +20,9 @@ theme = 'ananke'
         workingFolderCurrent = false
         [markup.asciidocExt.attributes]
             allow-uri-read = ""
+            source-highlighter = "rouge"
+            rouge-style = "molokai"
+            icons = "font"
 
 [security]
     enableInlineShortcodes = false

@@ -51,6 +51,27 @@ Generate a SpringBoot project by using https://start.spring.io/[Spring Initializ
 </project>
 ----
 
+[source,language="java"]
+----
+public static void main( String args[] ) {
+    System.out.println("Foobar!"); <1>
+}
+----
+<1> Print something
+
+[NOTE]
+====
+There are things to note!
+====
+
+{{< highlight java >}}
+class Hello {
+  void hello() {
+     System.out.println("Hello);
+  }
+}
+{{< /highlight >}}
+
 The main entrypoint class:
 
 [source,java]
