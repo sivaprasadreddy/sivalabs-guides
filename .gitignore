@@ -4,6 +4,7 @@ public/
 resources/_gen/
 .hugo_build.lock
 
+guide-repos/
 
 # Microsoft Visual Studio exclusions
 *.sln
