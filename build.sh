@@ -25,17 +25,8 @@ hugoReturnCode=$?
 # now the other steps in the pipeline, currently it's just htmltest, which doesn't count for the Result code
 # (it can fail or not, but it's the Hugo result code that gets signalled to Netlify in the exit)
 if [ $hugoReturnCode -ne 0 ]
-  then
-     echo "Hugo failed with return code "$hugoReturnCode"!!! ------------------------------------ !!!"
-  else
-     echo ---------------------------------------------------------
-     echo -------- Hugo succeeded, running htmltest... ------------
-     echo ---------------------------------------------------------
-     # they provide a nice installer of the latest version:
-     curl https://htmltest.wjdp.uk | bash
-     # the tee and the rest are for counting errors by kind:
-     ./bin/htmltest  | tee >(grep -v 'errors in\|failed in\|htmltest started\|======' | cut -d '-' -f 1 | sort | uniq -c -w 10)
-     echo ---------------------------------------------------------
+then
+   echo "Hugo failed with return code "$hugoReturnCode"!!! ------------------------------------ !!!"
 fi
 
 exit $hugoReturnCode
