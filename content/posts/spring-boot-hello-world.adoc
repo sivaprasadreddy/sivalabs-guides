@@ -1,0 +1,59 @@
+---
+title: "SpringBoot Hello World"
+date: 2023-02-01T09:39:58+05:30
+draft: true
+---
+
+Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
+
+We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need minimal Spring configuration.
+
+== Features
+
+* Create stand-alone Spring applications
+* Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)
+* Provide opinionated 'starter' dependencies to simplify your build configuration
+* Automatically configure Spring and 3rd party libraries whenever possible
+* Provide production-ready features such as metrics, health checks, and externalized configuration
+* Absolutely no code generation and no requirement for XML configuration
+
+== Introduction
+
+Generate a SpringBoot project by using https://start.spring.io/[Spring Initializr] with *Web* starter.
+
+.`pom.xml`
+[source,xml]
+----
+<project>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>${testcontainers.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
+----
+
+The main entrypoint class:
+
+[source,java]
+----
+include::https://raw.githubusercontent.com/sivaprasadreddy/spring-boot-jpa-crud-demo/main/src/main/java/com/sivalabs/bookmarks/Application.java[]
+----

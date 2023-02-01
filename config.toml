@@ -1,0 +1,33 @@
+baseURL = 'https://sivalabs-guides.netlify.app/'
+languageCode = 'en-us'
+title = 'SivaLabs Tech Guides'
+theme = 'ananke'
+
+[markup]
+    [markup.asciidocExt]
+        backend = 'html5'
+        extensions = []
+        failureLevel = 'fatal'
+        noHeaderOrFooter = true
+        preserveTOC = false
+        safeMode = 'unsafe'
+        sectionNumbers = false
+        trace = false
+        verbose = false
+        workingFolderCurrent = false
+        [markup.asciidocExt.attributes]
+            allow-uri-read = ""
+
+[security]
+    enableInlineShortcodes = false
+
+[security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
+    osEnv = ['(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM)$']
+
+[security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+
+[security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
