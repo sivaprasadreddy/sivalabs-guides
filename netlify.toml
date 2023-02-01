@@ -8,7 +8,7 @@
 
 # The Production Context applies to the branch you have configured as main branch to deploy:
 [context.production.environment]
-    HUGO_VERSION = "0.98.0"
+    HUGO_VERSION = "0.109.0"
     HUGO_ENV = "production"
 
 # The Deploy Preview Context applies to every Deploy Preview you create:
@@ -16,11 +16,11 @@
     command = "chmod +x build.sh && ./build.sh -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-    HUGO_VERSION = "0.98.0"
+    HUGO_VERSION = "0.109.0"
 
 [context.branch-deploy]
     command = "chmod +x build.sh && ./build.sh -b $DEPLOY_PRIME_URL"
 
 # The Branch Deploy Context applies to all non-master branches deployed, whether they are in a Deploy Preview or not:
 [context.branch-deploy.environment]
-    HUGO_VERSION = "0.98.0"
+    HUGO_VERSION = "0.109.0"
