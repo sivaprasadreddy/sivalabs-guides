@@ -2,9 +2,14 @@ GEM
   remote: https://rubygems.org/
   specs:
     asciidoctor (2.0.18)
+    rouge (3.30.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   asciidoctor (~> 2.0, >= 2.0.18)
+  rouge
+
+BUNDLED WITH
+   1.17.2
